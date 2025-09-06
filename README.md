@@ -25,7 +25,7 @@ chatbot-cariri/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Chatbot-turismo/chatbot-turismo.git
+   git clone https://github.com/ufca-es/ChatBot-Cariri-turismo-
    cd chatbot-turismo
    ```
 
