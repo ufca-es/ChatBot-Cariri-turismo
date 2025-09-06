@@ -23,7 +23,10 @@ if entrada.lower() == "ola":
             break
 
         for i in range(len(pergunstas_respostas)):
+            #modulo: lógica para identificar pergunta/resposta
             if (pergunstas_respostas[i-1]["pergunta"] == pergunta): 
                 print(pergunstas_respostas[i-1]["resposta"])
+                
+            #modulo: módulo caso a pergunta não esteja na base de dados
 else:
     print("Inválido! O bot não foi iniciado")
