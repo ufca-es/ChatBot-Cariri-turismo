@@ -25,13 +25,12 @@ class GerenciadorPersonalidades:
     def incrementar_uso(self):
         personalidade_usada = self.ativa
         self.contador_uso[personalidade_usada] += 1
-        print(f"[Sistema: Contagem de '{personalidade_usada}' incrementada para {self.contador_uso[personalidade_usada]}]")
         self.salvar_contagem()
     
     def trocar_personalidade(self):
         print(f"Por padrão, a personalidade do chat é guia turístico. ")
         try:
-            decisao_personalidade = int(input("Digite 1 para manter, 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado'"))
+            decisao_personalidade = int(input("Digite 1 para manter, 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado': "))
             if decisao_personalidade > 0 and decisao_personalidade <= len(self.personalidades):
                 self.ativa = self.personalidades[decisao_personalidade - 1]
             else:
