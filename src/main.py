@@ -3,7 +3,7 @@ from GerenciadorPersonalidades import GerenciadorPersonalidades
 from historico import addPerguntaList, salvarHistorico, carregarHistorico
 
 #Ler dados do arquivo perguntas_respostas.json
-with open("perguntas_respostas.json", "r", encoding="utf-8") as arquivo:
+with open("./data/perguntas_respostas.json", "r", encoding="utf-8") as arquivo:
     dados = json.load(arquivo)
 chaves=dados
 

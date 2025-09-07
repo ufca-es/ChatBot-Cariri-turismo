@@ -4,7 +4,7 @@ class GerenciadorPersonalidades:
     def __init__(self):
         self.personalidades = ["guia_turistico", "cabra_arretado", "guia_aperreado"]
         self.ativa = self.personalidades[0]
-        self.arquivo_contagem = "contagem_personalidades.json"
+        self.arquivo_contagem = "./data/contagem_personalidades.json"
         self.contador_uso = self.carregar_contagem()
 
     def carregar_contagem(self):
