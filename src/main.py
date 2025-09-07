@@ -17,6 +17,8 @@ print("Olá! Sou o ChatBot Cariri, seu guia de turismo!", "\n" \
 personalidade_ativa = gerenciador.ativa
 print(f"Personalidade ativa: {personalidade_ativa.replace('_', ' ').title()}")
 
+#exibe as 5 últimas interações
+carregarHistorico()
 
 pergunta = str(input("Digite sua pergunta para iniciar ou sair para encerrar: "))
 resposta=""
