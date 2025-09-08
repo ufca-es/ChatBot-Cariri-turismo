@@ -30,7 +30,7 @@ class GerenciadorPersonalidades:
     def trocar_personalidade(self):
         print(f"Por padrão, a personalidade do chat é guia turístico. ")
         try:
-            decisao_personalidade = int(input("Digite 1 para manter, 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado': "))
+            decisao_personalidade = int(input("Digite 1 para 'Guia Turístico', 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado': "))
             if decisao_personalidade > 0 and decisao_personalidade <= len(self.personalidades):
                 self.ativa = self.personalidades[decisao_personalidade - 1]
             else:

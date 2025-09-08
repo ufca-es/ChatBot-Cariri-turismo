@@ -1,4 +1,5 @@
 import json
+import random
 from GerenciadorPersonalidades import GerenciadorPersonalidades
 from historico import addPerguntaList, salvarHistorico, carregarHistorico
 
@@ -40,8 +41,9 @@ while pergunta.lower() != "sair":
             
             #Comparar as palavras da pergunta com as palaras-chave
             if any(chave in pergunta for chave in chaves):
-                resposta=i["respostas"][personalidade_ativa][0]
-                print(resposta)
+                lista_de_respostas = i["respostas"][personalidade_ativa]
+                resposta_sorteada = random.choice(lista_de_respostas)
+                print(resposta_sorteada)
                 encontrada = True
                 
                 addPerguntaList(perguntas_respostas, pergunta, resposta)
