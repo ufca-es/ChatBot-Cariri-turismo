@@ -22,7 +22,7 @@ class GerenciadorPersonalidades:
         except IOError as erro:
             print(f"Erro ao salvar a contagem: {erro}")
 
-    def incrementar_uso(self):
+    def somar_contagem_uso(self):
         personalidade_usada = self.ativa
         self.contador_uso[personalidade_usada] += 1
         self.salvar_contagem()

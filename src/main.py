@@ -13,7 +13,7 @@ gerenciador = GerenciadorPersonalidades()
 
 print("Olá! Sou o ChatBot Cariri, seu guia de turismo!", "\n" \
 "Que tal conhecer mais o Cariri? Tente me fazer uma pergunta ou escolha alguma das sugestões!","\n" \
-"(Para trocar de personalidade, digite 'mudar' | Para sair, digite 'sair' | Para carregar histórico, digite 'historico')")
+"(Para trocar de personalidade, digite 'mudar' | Para sair, digite uma mensagem de despedida (ex:'tchau', 'sair', etc) | Para carregar histórico, digite 'historico')")
 
 personalidade_ativa = gerenciador.ativa
 print(f"Personalidade ativa: {personalidade_ativa.replace('_', ' ').title()}")
@@ -21,17 +21,18 @@ print(f"Personalidade ativa: {personalidade_ativa.replace('_', ' ').title()}")
 #exibe as 5 últimas interações
 carregarHistorico()
 
-pergunta = str(input("Digite sua pergunta para iniciar ou sair para encerrar: "))
+pergunta = str(input("Digite sua pergunta para iniciar ou se despeça para para encerrar: "))
 resposta=""
 perguntas_respostas=[]
 
-while pergunta.lower() != "sair":   
+while True:    
 
     if pergunta.lower() == "mudar":
         gerenciador.trocar_personalidade()
         personalidade_ativa = gerenciador.ativa
     else:
         encontrada = False
+        e_despedida = False
 
         #Percorre todos os items do array ate encontrar uma pergunta semelhante 
         for i in dados:
@@ -47,7 +48,10 @@ while pergunta.lower() != "sair":
                 encontrada = True
                 
                 addPerguntaList(perguntas_respostas, pergunta, resposta)
-                gerenciador.incrementar_uso()
+                gerenciador.somar_contagem_uso()
+
+                if "tchau" in chaves:
+                    e_despedida = True
                 break
 
 
@@ -60,6 +64,8 @@ while pergunta.lower() != "sair":
                     relatorio.write(f"Nova pergunta: {pergunta}\n")
                     relatorio.write(f"Nova resposta: {resposta_usuario}\n")
                     relatorio.write(f"---------------------------------------\n")
+    if e_despedida:
+        break
 
     
     pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
