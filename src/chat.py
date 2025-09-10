@@ -1,31 +1,6 @@
-import json
-import random
-from GerenciadorPersonalidades import GerenciadorPersonalidades
-from historico import addPerguntaList, salvarHistorico, carregarHistorico
-
-#Ler dados do arquivo perguntas_respostas.json
-with open("./data/perguntas_respostas.json", "r", encoding="utf-8") as arquivo:
-    dados = json.load(arquivo)
-chaves=dados
-
-gerenciador = GerenciadorPersonalidades()
-
-
-print("Olá! Sou o ChatBot Cariri, seu guia de turismo!", "\n" \
-"Que tal conhecer mais o Cariri? Tente me fazer uma pergunta ou escolha alguma das sugestões!","\n" \
-"(Para trocar de personalidade, digite 'mudar' | Para sair, digite uma mensagem de despedida (ex:'tchau', 'sair', etc) | Para carregar histórico, digite 'historico')")
-
-personalidade_ativa = gerenciador.ativa
-print(f"Personalidade ativa: {personalidade_ativa.replace('_', ' ').title()}")
-
-#exibe as 5 últimas interações
-carregarHistorico()
-
-pergunta = str(input("Digite sua pergunta para iniciar ou se despeça para para encerrar: "))
-resposta=""
-perguntas_respostas=[]
-
-while True:    
+def chat(pergunta):
+    if pergunta=="sair":
+        return break
     if pergunta.lower() == "mudar":
         gerenciador.trocar_personalidade()
         personalidade_ativa = gerenciador.ativa
@@ -66,8 +41,3 @@ while True:
                     relatorio.write(f"---------------------------------------\n")
     if e_despedida:
         break
-
-    
-    pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
-salvarHistorico(perguntas_respostas)
-print("Chat encerrado, até mais!")

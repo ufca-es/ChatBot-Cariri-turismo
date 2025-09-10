@@ -1,6 +1,7 @@
-def addPerguntaList(lista, pergunta, resposta):
-    lista.append(pergunta)
-    lista.append(resposta)
+def addPerguntaList( pergunta, resposta):
+    with open("historico.txt", "a", encoding='utf-8') as arquive:
+        arquive.write(pergunta+"\n")
+        arquive.write(resposta+"\n")
 
 def salvarHistorico(lista):
     with open("historico.txt", "a", encoding='utf-8') as arquive:
