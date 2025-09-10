@@ -1,4 +1,4 @@
-class Estatisticas:
+class estatisticas:
     def __init__(self):
         self.total_interacoes = 0
         self.perguntas = []
