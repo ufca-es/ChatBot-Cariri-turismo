@@ -26,7 +26,8 @@ resposta=""
 perguntas_respostas=[]
 
 while True:    
-
+    if pergunta=="sair":
+        break
     if pergunta.lower() == "mudar":
         gerenciador.trocar_personalidade()
         personalidade_ativa = gerenciador.ativa
@@ -45,9 +46,10 @@ while True:
                 lista_de_respostas = i["respostas"][personalidade_ativa]
                 resposta_sorteada = random.choice(lista_de_respostas)
                 print(resposta_sorteada)
+
                 encontrada = True
                 
-                addPerguntaList(perguntas_respostas, pergunta, resposta)
+                addPerguntaList(perguntas_respostas, pergunta, resposta_sorteada)
                 gerenciador.somar_contagem_uso()
 
                 if "tchau" in chaves:
