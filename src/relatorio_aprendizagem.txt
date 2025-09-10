@@ -1,0 +1,9 @@
+Nova pergunta: bolo
+Nova resposta: griff do bolo
+---------------------------------------
+Nova pergunta: serra
+Nova resposta: chapada do araripe
+---------------------------------------
+Nova pergunta: sushi
+Nova resposta: sushi homu
+---------------------------------------

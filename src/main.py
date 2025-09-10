@@ -52,7 +52,15 @@ while pergunta.lower() != "sair":
 
 
         if not encontrada:
-            print("Desculpe! Não consegui compreender sua pergunta.")
+            print(f"Desculpe! Não consegui compreender sua pergunta.")
+            resposta_usuario = str(input(f"Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n"))
+
+            if resposta_usuario.lower() != "s":
+                with open("relatorio_aprendizagem.txt", 'a', encoding="utf-8") as relatorio:
+                    relatorio.write(f"Nova pergunta: {pergunta}\n")
+                    relatorio.write(f"Nova resposta: {resposta_usuario}\n")
+                    relatorio.write(f"---------------------------------------\n")
+
     
     pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
 salvarHistorico(perguntas_respostas)
