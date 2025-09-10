@@ -56,7 +56,7 @@
     }
   },
   {
-    "palavras_chaves_encerramento": ["tchau","obrigado","encerrar"],
+    "palavras_chaves_encerramento": ["tchau","obrigado","encerrar","sair"],
     "respostas": {
       "guia_turistico": [
         "Fico feliz em ajudar. Caso necessite de mais alguma informação, estou à sua disposição. Desejo a você uma excelente viagem pela região do Cariri."
