@@ -1,73 +1,48 @@
-import json
-import random
+from BaseConhecimento import BaseConhecimento
 from GerenciadorPersonalidades import GerenciadorPersonalidades
-from historico import addPerguntaList, salvarHistorico, carregarHistorico
+from historico import Historico
 
-#Ler dados do arquivo perguntas_respostas.json
-with open("./data/perguntas_respostas.json", "r", encoding="utf-8") as arquivo:
-    dados = json.load(arquivo)
-chaves=dados
-
+base_conhecimento = BaseConhecimento("src/data/perguntas_respostas.json")
 gerenciador = GerenciadorPersonalidades()
-
+historico = Historico("src/historico.txt")
 
 print("Olá! Sou o ChatBot Cariri, seu guia de turismo!", "\n" \
 "Que tal conhecer mais o Cariri? Tente me fazer uma pergunta ou escolha alguma das sugestões!","\n" \
-"(Para trocar de personalidade, digite 'mudar' | Para sair, digite uma mensagem de despedida (ex:'tchau', 'sair', etc) | Para carregar histórico, digite 'historico')")
+"(Para trocar de personalidade, digite 'mudar' | Para sair, digite uma mensagem de despedida (ex:'tchau', 'sair', etc)")
 
 personalidade_ativa = gerenciador.ativa
 print(f"Personalidade ativa: {personalidade_ativa.replace('_', ' ').title()}")
 
 #exibe as 5 últimas interações
-carregarHistorico()
+historico.carregarHistorico()
 
 pergunta = str(input("Digite sua pergunta para iniciar ou se despeça para para encerrar: "))
-resposta=""
-perguntas_respostas=[]
+while True:
+    personalidade_ativa = gerenciador.ativa
 
-while True:    
     if pergunta.lower() == "mudar":
         gerenciador.trocar_personalidade()
         personalidade_ativa = gerenciador.ativa
-    else:
-        encontrada = False
-        e_despedida = False
+        pergunta = str(input(f"\n({personalidade_ativa.replace('_', ' ').title()}) Personalidade alterada. Qual sua pergunta? "))
+    else: 
+        bloco_encontrado, resposta = base_conhecimento.buscar_palavras_e_blocos(pergunta, personalidade_ativa)
 
-        #Percorre todos os items do array ate encontrar uma pergunta semelhante 
-        for i in dados:
+        if resposta:
+            print(resposta)
+            gerenciador.somar_contagem_uso()
+            historico.registrar_interacao(pergunta,resposta)
 
-        # pegar palavras-chave de cada item do array 
-            chaves = next((v for k, v in i.items() if k.startswith("palavras_chaves")), [])            
-            
-            #Comparar as palavras da pergunta com as palaras-chave
-            if any(chave in pergunta for chave in chaves):
-                lista_de_respostas = i["respostas"][personalidade_ativa]
-                resposta_sorteada = random.choice(lista_de_respostas)
-                print(resposta_sorteada)
-
-                encontrada = True
-                
-                addPerguntaList(perguntas_respostas, pergunta, resposta_sorteada)
-                gerenciador.somar_contagem_uso()
-
-                if "tchau" in chaves:
-                    e_despedida = True
+            chaves_do_bloco = bloco_encontrado.get("palavras_chaves", [])
+            if "tchau" in chaves_do_bloco:
                 break
-
-
-        if not encontrada:
-            print(f"Desculpe! Não consegui compreender sua pergunta.")
-            resposta_usuario = str(input(f"Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n"))
-
-            if resposta_usuario.lower() != "s":
-                with open("relatorio_aprendizagem.txt", 'a', encoding="utf-8") as relatorio:
+        else:
+              print("Desculpe, não consegui compreender sua pergunta.")
+              #aprendizado
+              resposta_usuario = str(input(f"Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n"))
+              if resposta_usuario.lower() != "s":
+                with open("src/relatorio_aprendizagem.txt", 'a', encoding="utf-8") as relatorio:
                     relatorio.write(f"Nova pergunta: {pergunta}\n")
                     relatorio.write(f"Nova resposta: {resposta_usuario}\n")
                     relatorio.write(f"---------------------------------------\n")
-    if e_despedida:
-        break
-
-    
-    pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
-salvarHistorico(perguntas_respostas)
+        pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
 print("Chat encerrado, até mais!")
