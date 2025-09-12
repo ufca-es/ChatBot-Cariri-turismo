@@ -51,6 +51,9 @@ while True:
 
         pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
 
+estatistica.gerar_relatorio_txt()  
+
+
 print(f" perguntas frequentes: {top_perguntas()}")
 print("Chat encerrado, até mais!")
 #estatistica.gerar_relatorio_final
