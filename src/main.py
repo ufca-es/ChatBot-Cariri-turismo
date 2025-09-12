@@ -43,7 +43,7 @@ while True:
             registrar_pergunta(pergunta)
             gerenciador.somar_contagem_uso()
             historico.registrar_interacao(pergunta,resposta)
-            estatistica.registrar_interacao(pergunta)
+            estatistica.registrar_interacao(pergunta, personalidade_ativa)
 
 
         else:

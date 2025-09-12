@@ -7,8 +7,8 @@ from aprendizado import registrar_aprendizado
 from estatística import Estatisticas
 
 # Inicializar componentes principais
-base_conhecimento = BaseConhecimento("data/perguntas_respostas.json")
-historico = Historico("historico.txt")
+base_conhecimento = BaseConhecimento("src/data/perguntas_respostas.json")
+historico = Historico("src/historico.txt")
 estatisticas= Estatisticas()
 bot_iniciado = False
 
@@ -19,7 +19,7 @@ janela.geometry("450x600")
 
 # Constantes
 font=("Arial", 14)
-with open("./data/perguntas_respostas.json", "r", encoding="utf-8") as arquivo:
+with open("src/data/perguntas_respostas.json", "r", encoding="utf-8") as arquivo:
     dados = json.load(arquivo)
 chaves=dados
 
