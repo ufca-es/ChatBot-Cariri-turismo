@@ -22,6 +22,7 @@ class Historico:
                 if numero%2!=0:
                     print(f"pergunta: {linha.strip()}")
                 else:
-                    print(f"Resposta: {linha.strip()}\n")   
+                    print(f"Resposta: {linha.strip()}\n")
+            return linhas[-10:] if len(linhas) >= 10 else linhas
         except FileNotFoundError:
             print("erro ao carregar histórico.")

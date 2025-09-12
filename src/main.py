@@ -23,7 +23,9 @@ while True:
     personalidade_ativa = gerenciador.ativa
 
     if pergunta.lower() == "mudar":
-        gerenciador.trocar_personalidade()
+        print("Bot: Digite 1 para 'Guia Turístico', 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado':\n")
+        nova_personalidade=int(input())
+        gerenciador.trocar_personalidade(nova_personalidade)
         personalidade_ativa = gerenciador.ativa
         pergunta = str(input(f"\n({personalidade_ativa.replace('_', ' ').title()}) Personalidade alterada. Qual sua pergunta? "))
     else: 
@@ -38,7 +40,7 @@ while True:
             if "tchau" in chaves_do_bloco:
                 break
         else:
-              registrar_aprendizado(pergunta)              
+              registrar_aprendizado(pergunta , None)              
 
         pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
 print("Chat encerrado, até mais!")
