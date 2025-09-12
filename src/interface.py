@@ -4,9 +4,13 @@ from GerenciadorPersonalidades import GerenciadorPersonalidades
 from BaseConhecimento import BaseConhecimento
 from historico import Historico
 from aprendizado import registrar_aprendizado
+from estatística import Estatisticas
 
+# Inicializar componentes principais
 base_conhecimento = BaseConhecimento("data/perguntas_respostas.json")
 historico = Historico("historico.txt")
+estatisticas= Estatisticas()
+bot_iniciado = False
 
 # Criar a janela principal
 janela = tk.Tk()
@@ -35,6 +39,7 @@ label_nome.pack(side="left")
 
 # ------ MAIN --------
 
+
 # Frame principal do chat
 frame_chat = tk.Frame(
     janela,
@@ -62,7 +67,10 @@ texto_chat = tk.Text(
 
 )
 texto_chat.pack(expand=True, fill="both")
-
+texto_chat.tag_config("user", foreground="blue", font=("Arial", 11))
+texto_chat.tag_config("bot", foreground="green", font=("Arial", 11))
+texto_chat.tag_config("bot-erro", foreground="red", font=("Arial", 11))
+texto_chat.tag_config("bot-alert", foreground="gray", font=("Arial", 11))
 
 # ------ FOOTER --------
 
@@ -71,12 +79,28 @@ frame_botom.grid(row=2, column=0, sticky="nsew")
 
 entrada = tk.Entry(frame_botom, font=("Arial",10))
 entrada.pack(side="left", expand=True, fill="x", padx=5, pady=8)
-entrada.bind("<Return>", lambda event: enviar_pergunta()) # Disparar evento
+entrada.bind("<Return>", lambda event: verificar_bot(bot_iniciado)) # Disparar evento
 
 botao = tk.Button(frame_botom, text="Enviar", bg="#4CAF50", fg="white", font=("Arial",10), relief="raised", bd=0, activebackground="#45a049", activeforeground="white", cursor="hand2")
 botao.pack(side="right", padx=5, pady=5)
 
-# -------- 
+def verificar_bot(bot_iniciado):
+    pergunta = entrada.get().strip()
+    if pergunta == "olá" and not bot_iniciado:
+        entrada.bind("<Return>", lambda event: enviar_pergunta()) # Disparar evento
+        # Inserir mensagem inicial
+        texto_chat.config(state="normal")
+        texto_chat.insert("end", "Olá! Sou o ChatBot Cariri, seu guia de turismo! \nQue tal conhecer mais o Cariri? Tente me fazer uma pergunta ou escolha alguma das sugestões! \n(Para trocar de personalidade, digite 'mudar' | Para sair, digite uma mensagem de despedida (ex:'tchau', 'sair', etc)\n\n", "gray")
+        texto_chat.config(state="disabled")
+        
+        bot_iniciado = True
+    else:
+        texto_chat.config(state="normal")
+        texto_chat.insert("end", "Bot: Por favor, diga 'olá' para iniciar o chat.\n\n", "bot-alert")
+        texto_chat.config(state="disabled")
+    entrada.delete(0, "end")
+    texto_chat.see("end")
+
 def enviar_pergunta():
     pergunta = entrada.get().strip()
 
@@ -86,27 +110,30 @@ def enviar_pergunta():
     if pergunta.lower() in ["carregar histórico", "histórico", "mostrar histórico","historico"]:
         historicoa = historico.carregarHistorico()
         texto_chat.config(state="normal")
-        texto_chat.insert("end", f"EXIBINDO HISTÓRICO(5 últimas interações):\n\n")
+        texto_chat.insert("end", f"EXIBINDO HISTÓRICO(5 últimas interações):\n\n", "bot")
 
         for i in range(0, len(historicoa), 2):
             perg = historicoa[i].strip()                                    #recupera pergunta
             resp = historicoa[i+1].strip() if i+1 < len(historicoa) else "" #recupera resposta
-            texto_chat.insert("end", f"Você: {perg}\n", "user")
-            texto_chat.insert("end", f"Bot: {resp}\n\n", "bot")
+            texto_chat.insert("end", f"{perg}\n", "user")
+            texto_chat.insert("end", f"{resp}\n\n", "bot")
 
         entrada.delete(0, "end")
         texto_chat.config(state="disabled")
+        texto_chat.see("end")
         return
 
     # Exibe pergunta no chat
     texto_chat.config(state="normal")
-    texto_chat.insert("end", f"Você: {pergunta}\n")
+    texto_chat.insert("end", f"Você: {pergunta}\n", "user")
 
     if pergunta.lower() == "mudar":
         texto_chat.insert(
             "end",
-            "Bot: Digite 1 para 'Guia Turístico', 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado':\n"
+            "Bot: Digite 1 para 'Guia Turístico', 2 para 'Cabra Arretado' ou 3 para 'Guia Aperreado':\n",
+            "bot"
         )
+        texto_chat.see("end")
         texto_chat.config(state="disabled")
 
         def escolher():
@@ -117,12 +144,13 @@ def enviar_pergunta():
                 texto_chat.config(state="normal")
                 texto_chat.insert(
                     "end",
-                    f"Bot: Personalidade alterada para {personalidade_ativa.replace('_', ' ').title()}.\n\n"
+                    f"Bot: Personalidade alterada para {personalidade_ativa.replace('_', ' ').title()}.\n\n ",
+                    "bot-alert"
                 )
                 texto_chat.config(state="disabled")
             except ValueError:
                 texto_chat.config(state="normal")
-                texto_chat.insert("end", "Bot: Opção inválida, digite apenas números (1, 2 ou 3).\n\n")
+                texto_chat.insert("end", "Bot: Opção inválida, digite apenas números (1, 2 ou 3).\n\n", "bot-erro")
                 texto_chat.config(state="disabled")
 
             entrada.delete(0, "end")
@@ -137,17 +165,23 @@ def enviar_pergunta():
 
     # Busca resposta
     chaves_do_bloco, resposta = base_conhecimento.buscar_palavras_e_blocos(pergunta, gerenciador.ativa)
-    
-    if "tchau" in chaves_do_bloco:
+
+    if any(palavra in chaves_do_bloco for palavra in ["tchau", "obrigado", "encerrar", "sair"]):
         texto_chat.config(state="normal")
-        texto_chat.insert("Chat encerrado, até mais!")
+        texto_chat.insert("end", f"Bot: {resposta}\n\n","bot")
         texto_chat.config(state="disabled")
+        global bot_iniciado
+        bot_iniciado = False
+        entrada.bind("<Return>", lambda event: verificar_bot(bot_iniciado)) # Disparar evento
+        botao.config(command=lambda: verificar_bot(bot_iniciado)) # Muda ação do botão
+        entrada.delete(0, "end")
+        texto_chat.see("end")
         return
     
     if resposta is None:
         # Caso não entenda a pergunta
-        texto_chat.insert("end", "Bot: Desculpe, não consegui compreender sua pergunta.\n")
-        texto_chat.insert("end", "Bot: Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n\n")
+        texto_chat.insert("end", "Bot: Desculpe, não consegui compreender sua pergunta.\n", "bot-alert")
+        texto_chat.insert("end", "Bot: Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n\n", "bot-alert")
 
         # Cria um campo temporário para aprendizado
         def salvar_aprendizado():
@@ -156,10 +190,11 @@ def enviar_pergunta():
                 registrar_aprendizado(pergunta, resposta_usuario)
                 historico.registrar_interacao(pergunta, resposta_usuario)
                 texto_chat.config(state="normal")
-                texto_chat.insert("end", f"Você: {resposta_usuario}\n")
-                texto_chat.insert("end", f"Bot: Obrigado! Aprendi a responder: {pergunta}\n\n")
+                texto_chat.insert("end", f"Você: {resposta_usuario}\n","user")
+                texto_chat.insert("end", f"Bot: Obrigado! Aprendi a responder: {pergunta}\n\n", "bot")
                 texto_chat.config(state="disabled")
             entrada.delete(0, "end")
+            texto_chat.see("end")
 
             # Remove o binding extra para não afetar a próxima pergunta
             botao.config(command=enviar_pergunta)
@@ -171,23 +206,23 @@ def enviar_pergunta():
 
     else:
         # Caso encontre resposta
-        texto_chat.insert("end", f"Bot: {resposta}\n\n")
+        texto_chat.insert("end", f"Bot: {resposta}\n\n", "bot")
         historico.registrar_interacao(pergunta, resposta)
+        estatisticas.registrar_interacao(pergunta)
 
     # Atualiza interface
     texto_chat.config(state="disabled")
     texto_chat.see("end")
     entrada.delete(0, "end")
 
-botao.config(command=enviar_pergunta)
+botao.config(command=verificar_bot(bot_iniciado))
 
 # ---------- GRID ----------
 janela.grid_rowconfigure(1, weight=1)
 janela.grid_columnconfigure(0, weight=1)
 
-# Inserir mensagem inicial
 texto_chat.config(state="normal")
-texto_chat.insert("end", "Olá! Sou o ChatBot Cariri, seu guia de turismo! \nQue tal conhecer mais o Cariri? Tente me fazer uma pergunta ou escolha alguma das sugestões! \n(Para trocar de personalidade, digite 'mudar' | Para sair, digite uma mensagem de despedida (ex:'tchau', 'sair', etc)\n\n")
+texto_chat.insert("end", "Bot: Por favor, diga 'olá' para iniciar o chat.\n\n", "bot-alert")
 texto_chat.config(state="disabled")
 
 # Loop principal
