@@ -23,7 +23,3 @@ class Estatisticas:
                 mais_frequente = p
 
         return (mais_frequente, max_freq)
-
-
-
-

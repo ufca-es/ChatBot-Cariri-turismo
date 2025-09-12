@@ -1,10 +1,12 @@
 from BaseConhecimento import BaseConhecimento
 from GerenciadorPersonalidades import GerenciadorPersonalidades
 from historico import Historico
+from estatística import Estatisticas
 
 base_conhecimento = BaseConhecimento("src/data/perguntas_respostas.json")
 gerenciador = GerenciadorPersonalidades()
 historico = Historico("src/historico.txt")
+estatistica = Estatisticas()
 
 print("Olá! Sou o ChatBot Cariri, seu guia de turismo!", "\n" \
 "Que tal conhecer mais o Cariri? Tente me fazer uma pergunta ou escolha alguma das sugestões!","\n" \
@@ -31,7 +33,7 @@ while True:
             print(resposta)
             gerenciador.somar_contagem_uso()
             historico.registrar_interacao(pergunta,resposta)
-
+            estatistica.registrar_interacao(pergunta)
             chaves_do_bloco = bloco_encontrado.get("palavras_chaves", [])
             if "tchau" in chaves_do_bloco:
                 break
@@ -46,3 +48,4 @@ while True:
                     relatorio.write(f"---------------------------------------\n")
         pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
 print("Chat encerrado, até mais!")
+#estatistica.gerar_relatorio_final
