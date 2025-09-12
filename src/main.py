@@ -2,7 +2,7 @@ from BaseConhecimento import BaseConhecimento
 from GerenciadorPersonalidades import GerenciadorPersonalidades
 from historico import Historico
 from estatística import Estatisticas
-
+from aprendizado import registrar_aprendizado
 base_conhecimento = BaseConhecimento("src/data/perguntas_respostas.json")
 gerenciador = GerenciadorPersonalidades()
 historico = Historico("src/historico.txt")
@@ -38,14 +38,8 @@ while True:
             if "tchau" in chaves_do_bloco:
                 break
         else:
-              print("Desculpe, não consegui compreender sua pergunta.")
-              #aprendizado
-              resposta_usuario = str(input(f"Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n"))
-              if resposta_usuario.lower() != "s":
-                with open("src/relatorio_aprendizagem.txt", 'a', encoding="utf-8") as relatorio:
-                    relatorio.write(f"Nova pergunta: {pergunta}\n")
-                    relatorio.write(f"Nova resposta: {resposta_usuario}\n")
-                    relatorio.write(f"---------------------------------------\n")
+              registrar_aprendizado(pergunta)              
+
         pergunta = str(input("Digite qualquer coisa para iniciar ou sair para encerrar: "))
 print("Chat encerrado, até mais!")
 #estatistica.gerar_relatorio_final
