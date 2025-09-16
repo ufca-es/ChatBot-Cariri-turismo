@@ -16,16 +16,27 @@ Ele utiliza uma base de conhecimento em JSON, permite personalização de respos
 ## 📂 Estrutura de arquivos e pastas
 <pre>
 chatbot-cariri/
-│── data/
 │── src/
+│   ├── data/
+│   │   ├── perguntas_frequentes.json
+│   │   ├── perguntas_respostas.json
 │   ├── main.py  
+│   ├── chatbot_core.py
+│   ├── chatbot_ui.py
+│   ├── aprendizado.py
+│   ├── estatística.py
+│   ├── BaseConhecimento.py
+│   ├── GerenciadorPersonalidade.py
+│   ├── historico.py
+│   ├── perguntas_frequentes.py
+│── .gitignore
 └── README.md
 </pre>
 ---
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/ufca-es/ChatBot-Cariri-turismo-
+   git clone https://github.com/ufca-es/ChatBot-Cariri-turismo
    cd chatbot-turismo
    ```
 
