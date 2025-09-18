@@ -29,5 +29,10 @@ def registrar_pergunta(pergunta_usuario):
 def top_perguntas(n=5):
     perguntas = carregar_perguntas()
     # Ordena pelo contador decrescente
-    top = sorted(perguntas.items(), key=lambda item: item[1], reverse=True)[:n]
-    return [p for p, _ in top]
+    total = sorted(perguntas.items(), key=lambda item: item[1], reverse=True)[:n]
+    top = [p for p, _ in total]
+    if top:
+        mensagem = "\n📊 Perguntas mais frequentes:\n" + "\n".join(f"• {p}" for p in top)
+    else:
+        mensagem = "\n📊 Nenhuma pergunta registrada ainda."
+    return f"{mensagem} \n"
