@@ -18,7 +18,7 @@ class ChatBotApp:
         # Se ainda não iniciado
         mensagem_historico, mensagem, tag = self.core.iniciar()
         self._inserir_texto(mensagem_historico, "black")
-        self._inserir_texto(f"{mensagem} Bot: ", tag)
+        self._inserir_texto(f"{mensagem}", tag)
 
     # ---------------- UI ----------------
     def _criar_interface(self):
@@ -36,7 +36,7 @@ class ChatBotApp:
             frame_topo, self.personalidade, *opcoes, command=self.trocar_personalidade
         )
         menu_personalidade.config(
-            bg="#c90000", fg="white", font=("Arial", 10, "bold"),
+            bg="#2196F3", fg="white", font=("Arial", 10, "bold"),
             relief="flat", cursor="hand2", highlightthickness=0
         )
         menu_personalidade.pack(side="right", padx=5, pady=5)
@@ -59,7 +59,7 @@ class ChatBotApp:
 
         self.texto_chat.tag_config("user", foreground="#0077A7", font=("Arial", 11))
         self.texto_chat.tag_config("bot", foreground="#1F8300", font=("Arial", 11))
-        self.texto_chat.tag_config("bot-erro", foreground="red", font=("Arial", 11))
+        self.texto_chat.tag_config("bot-erro", foreground="#E53935", font=("Arial", 11))
         self.texto_chat.tag_config("bot-alert", foreground="#5F5F5F", font=("Arial", 11))
         self.texto_chat.tag_config("black", foreground="#181818", font=("Arial", 11, "italic"))
 
