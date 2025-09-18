@@ -58,11 +58,6 @@ class ChatBotCore:
         # Procurar resposta na base
         chaves, resposta = self.base.buscar_palavras_e_blocos(pergunta, self.personalidade_ativa)
 
-        # Encerrar
-        if any(p in (chaves or []) for p in ["tchau", "obrigado", "encerrar", "sair"]):
-            self.bot_iniciado = False
-            self.estatisticas.gerar_relatorio_txt()
-            return resposta or "Até mais! Encerrando o chat...", "bot"
 
         # Não entendeu → aprendizado
         if resposta is None:

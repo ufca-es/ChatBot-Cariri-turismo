@@ -2,13 +2,14 @@
 import tkinter as tk
 from chatbot_core import ChatBotCore
 from perguntas_frequentes import top_perguntas
+from tkinter import messagebox
 
 class ChatBotApp:
     def __init__(self):
         self.core = ChatBotCore()
         self.janela = tk.Tk()
         self.janela.title("ChatBot Cariri turismo")
-        self.janela.state("zoomed")
+        self.janela.attributes("-fullscreen", True)
 
         # Personalidade inicial
         self.personalidade = tk.StringVar(value="Guia turístico")
@@ -29,6 +30,15 @@ class ChatBotApp:
         # Ícone e título
         tk.Label(frame_topo, text="🤖", bg="#4CAF50", fg="white", font=("Arial", 14)).pack(side="left", padx=10)
         tk.Label(frame_topo, text="ChatBot Cariri turismo", bg="#4CAF50", fg="white", font=("Arial", 14)).pack(side="left")
+
+        # Botão de sair
+        btn_exit = tk.Button(
+            frame_topo, text="❌",
+            bg="#f44336", fg="white", font=("Arial", 10, "bold"),
+            relief="flat", cursor="hand2",
+            command=self.fechar_janela,
+        )
+        btn_exit.pack(side="right", padx=5, pady=5)
 
         # Select (OptionMenu) para personalidades
         opcoes = ["Guia turístico", "cabra arretado", "Guia aperreado"]
@@ -67,14 +77,33 @@ class ChatBotApp:
         frame_bottom = tk.Frame(self.janela, bg="#ddd", height=10)
         frame_bottom.grid(row=2, column=0, sticky="nsew")
 
-        self.entrada = tk.Entry(frame_bottom, font=("Arial", 10))
-        self.entrada.pack(side="left", expand=True, fill="x", padx=5, pady=8)
+        self.entrada = tk.Entry(
+            frame_bottom,
+            font=("Arial", 12),
+            bg="#f5f5f5",
+            fg="#222",
+            relief="flat",
+            bd=2,
+            highlightthickness=2,
+            highlightbackground="#B8CEB8",
+            insertbackground="#222"
+        )
+        self.entrada.configure(
+            width=1  # width=1 deixa o Entry expandir conforme o pack(fill="x")
+        )
+        self.entrada.pack(side="left", expand=True, fill="x", padx=15, pady=12, ipady=8)
         self.entrada.bind("<Return>", lambda e: self.processar_entrada())
 
-        self.botao = tk.Button(frame_bottom, text="Enviar", bg="#4CAF50", fg="white", font=("Arial", 10),
-                               relief="raised", bd=0, activebackground="#45a049", activeforeground="white",
-                               cursor="hand2", command=self.processar_entrada)
-        self.botao.pack(side="right", padx=5, pady=5)
+        self.botao = tk.Button(
+            frame_bottom, text="  Enviar  ", 
+            bg="#4CAF50", fg="white", font=("Arial", 10), 
+            bd=0, 
+            activebackground="#45a049", 
+            activeforeground="white",
+            cursor="hand2", 
+            command=self.processar_entrada
+        )
+        self.botao.pack(side="right", fill="x", padx=10, pady=8, ipady=8)
 
         self.janela.grid_rowconfigure(1, weight=1)
         self.janela.grid_columnconfigure(0, weight=1)
@@ -94,6 +123,11 @@ class ChatBotApp:
         self.texto_chat.insert("end", mensagem + "\n", tag)
         self.texto_chat.config(state="disabled")
         self.texto_chat.see("end")
+
+    def fechar_janela(self):
+        self.core.estatisticas.gerar_relatorio_txt()
+        messagebox.showinfo("Estatística gerada", "✅ O arquivo de estatística foi gerado com sucesso!")
+        self.janela.destroy()
 
     # ---------------- Lógica ----------------
     def processar_entrada(self):
