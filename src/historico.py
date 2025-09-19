@@ -1,8 +1,13 @@
+"""Módulo que gerencia o histórico de conversas do chatbot."""
+
 class Historico:
+    """Gerencia o registro e a leitura do histórico de conversas em um arquivo."""
     def __init__(self,caminho_arquivo="src/historico.txt"):
+        """Inicializa a classe, definindo o caminho do arquivo de histórico."""
         self.caminho_arquivo = caminho_arquivo
 
     def registrar_interacao(self, pergunta, resposta):
+        """Registra uma única interação (pergunta e resposta) no arquivo de histórico."""
         try:   
             with open(self.caminho_arquivo, "a", encoding='utf-8') as arquive:
                     arquive.write(f"Pergunta: {pergunta}\n")
@@ -11,8 +16,8 @@ class Historico:
         except IOError:
              print("ERRO: Não foi possível registrar a interação no histórico.")
            
-
     def carregarHistorico(self):
+        """Lê e exibe as últimas 5 interações do arquivo de histórico."""
         try:
             with open(self.caminho_arquivo, "r", encoding="utf-8") as arquivo:
                 linhas=arquivo.readlines()

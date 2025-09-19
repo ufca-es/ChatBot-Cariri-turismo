@@ -1,9 +1,11 @@
 import json
 import random
-#Ler dados do arquivo perguntas_respostas.json
+
+"""Módulo que gerencia a base de conhecimento do chatbot a partir de um JSON."""
 
 class BaseConhecimento():
     def __init__(self,caminho_arquivo):
+        """Inicializa a classe, carregando os dados do arquivo JSON."""
         try:
                with open(caminho_arquivo, "r", encoding="utf-8") as arquivo:
                 self.dados = json.load(arquivo)
@@ -11,6 +13,7 @@ class BaseConhecimento():
             print(f"ERRO: Arquivo de conhecimento '{caminho_arquivo}' não foi encontrado.")
             self.dados = []
     def buscar_palavras_e_blocos(self, pergunta_usuario, personalidade):
+        """Busca uma resposta no JSON com base em palavras chaves na pergunta do usuário e na personalidade ativa."""
         pergunta_usuario = pergunta_usuario.lower()
 
         # Percorre todos os items do array ate encontrar uma pergunta semelhante 

@@ -1,5 +1,7 @@
 import os
 
+"""Ferramenta de linha de comando para gerenciar o aprendizado do chatbot."""
+
 ARQUIVO_APRENDIZADO = "relatorio_aprendizagem.txt"
 ARQUIVO_PENDENTE = "aprendizado_pendente.txt"
 

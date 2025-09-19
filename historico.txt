@@ -10,3 +10,15 @@ Pergunta: comer
 Resposta: Restaurante Sirigado do Pedro, (Juazeiro do Norte), O caldo do Véi do Caldo(Crato) e a Carne de Sol do 'Melaço'(Barbalha)
 Pergunta: comer
 Resposta: Existem muitos locais onde se pode comer tendo contato com a natureza, como o Colina do Horto (Juazeiro), o Melaço (Barbalha) e o Bosque da Serra (Crato).
+Pergunta: comer
+Resposta: Existem muitos locais onde se pode comer tendo contato com a natureza, como o Colina do Horto (Juazeiro), o Melaço (Barbalha) e o Bosque da Serra (Crato).
+Pergunta: familia
+Resposta: Não deixe de ir ao Aqua Park, alugar uma casa no Açude Umari para passar o fim de semana também é uma ótima ideia! Contato com a natureza e paz.
+Pergunta: bons
+Resposta: A região do Cariri tem uma diversidade de pontos turísticos. Entre os quais se destacam a colina do Horto com a estátua de Padre Cícero (Juazeiro), a Floresta Nacional do Araripe e o Museu Paleontológico de Santana do Cariri.
+Pergunta: comer
+Resposta: Vale a pena conhecer a praça de alimentação do Cariri Garden Shoppin, com diversos restaurantes dos mais variados tipos. Fastfood, comida brasileira, italiana e muito mais.
+Pergunta: oi
+Resposta: oi
+Pergunta: tchau
+Resposta: Fico feliz em ajudar. Caso necessite de mais alguma informação, estou à sua disposição. Desejo a você uma excelente viagem pela região do Cariri.

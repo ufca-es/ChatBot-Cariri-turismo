@@ -1,5 +1,8 @@
+"""Salva as novas perguntas e respostas aprendidas com o usuário."""
+
 def registrar_aprendizado(pergunta, resposta_usuario):
-    #aprendizado
+    """Pede uma resposta ao usuário e, se ele não digitar para sair, salva a nova pergunta/resposta em um arquivo."""
+
     if resposta_usuario == None:
         print("Desculpe, não consegui compreender sua pergunta.")
         resposta_usuario = str(input(f"Se possível, insira a resposta dela para que eu possa auxiliar você melhor posteriormente (Digite 's' para sair sem responder):\n"))

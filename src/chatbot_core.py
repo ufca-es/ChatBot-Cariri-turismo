@@ -1,4 +1,5 @@
-# chatbot_core.py
+"""Módulo principal que contém a classe ChatBotCore, o cérebro do chatbot."""
+
 from GerenciadorPersonalidades import GerenciadorPersonalidades
 from BaseConhecimento import BaseConhecimento
 from historico import Historico
@@ -8,7 +9,11 @@ from perguntas_frequentes import  registrar_pergunta
 
 
 class ChatBotCore:
+    """Orquestra todos os módulos e gerencia a lógica principal da conversa."""
+
     def __init__(self):
+        """Inicializa todos os módulos especialistas do chatbot."""
+
         self.base = BaseConhecimento("src/data/perguntas_respostas.json")
         self.historico = Historico("historico.txt")
         self.estatisticas = Estatisticas()
@@ -18,7 +23,7 @@ class ChatBotCore:
         self.bot_iniciado = False
 
     def iniciar(self):
-        """Inicia o bot se o usuário disser 'olá'."""
+        """Prepara a mensagem inicial do bot, incluindo o histórico de conversas."""
         self.bot_iniciado = True
 
         # Carregar histórico
@@ -41,7 +46,7 @@ class ChatBotCore:
         
 
     def responder(self, pergunta):
-        """Recebe uma pergunta e retorna a resposta e o tipo de mensagem."""
+        """Processa a pergunta do usuário e retorna a resposta apropriada."""
         if not pergunta:
             return None, None
 

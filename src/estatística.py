@@ -1,15 +1,22 @@
+"""Módulo que gerencia as estatísticas da sessão de conversa."""
+
 class Estatisticas:
+    """Coleta e processa dados estatísticos de uma única sessão do chatbot."""
+
     def __init__(self):
+        """Inicializa os contadores da sessão."""
         self.total_interacoes = 0
         self.perguntas = []
         self.personalidades_usadas = []  
 
-    def registrar_interacao(self, pergunta, personalidade):  
+    def registrar_interacao(self, pergunta, personalidade): 
+        """Registra os dados de uma nova interação bem-sucedida."""
         self.total_interacoes += 1
         self.perguntas.append(pergunta)
         self.personalidades_usadas.append(personalidade) 
 
     def pergunta_mais_frequente(self):
+        """Calcula qual foi a pergunta mais feita na sessão."""
         if not self.perguntas:
             return None
 
@@ -27,12 +34,14 @@ class Estatisticas:
         return (mais_frequente, max_freq)
     
     def contar_personalidades(self):
+        """Conta quantas vezes cada personalidade foi usada nesta sessão."""
         contador = {} 
         for personalidade in self.personalidades_usadas:
             contador[personalidade] = contador.get(personalidade, 0) + 1
         return contador
     
     def gerar_relatorio_txt(self, nome_arquivo="relatorio.txt"):
+        """Gera e salva um relatório de texto formatado com as estatísticas."""
         from datetime import datetime
         
         relatorio = []
