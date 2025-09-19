@@ -1,72 +1,251 @@
 [
   {
-    "palavras_chaves": ["recomenda","lugares","bons","conhecer","passeio"],
+    "palavras_chaves": ["recomenda", "lugares", "bons", "conhecer", "passeio"],
     "respostas": {
-      "guia_turistico": [
-        "A região do Cariri tem uma diversidade de pontos turísticos. Entre os quais se destacam a colina do Horto com a estátua de Padre Cícero (Juazeiro), a Floresta Nacional do Araripe e o Museu Paleontológico de Santana do Cariri.",
-        "A fundação Casa Grande em Olinda é uma ótima opção para quem quer se enriquecer na cultura do Cariri.  O Parque dos Pterossauros  é um ótimo local para realizar trilhas e conhecer fósseis. A estátua do Padre Cícero se destaca, valendo bastante a pena conhecer a casa onde o mesmo morava, cheia de detalhes e riquezas culturais.",
-        "O museu dos dinossauros em Santana do Cariri é rico em história e cultura, vale bastante a pena ir. O Horto com os seus bondinhos encanta qualquer um em uma tarde de domingo de brisa boa. Se você é mais religioso, pode optar por conhecer as igrejas da cidade, a Igreja do Salesianos é incrível."
-      ],
-      "cabra_arretado": [
-        "Ôh meu chapa, tu quer é rodar esse Cariri, num é? Pois escute o que o cabra aqui tem pra te dizer! Se tu é do povo da reza, tem que subir no Horto pra dar um 'oi' pro Padim Ciço, a vista de lá é arretada! Agora, se tua praia é um mato verde e um arzim fresco, se jogue na Chapada do Araripe, que é pra encher os olhos. E se curtir umas coisa véia, dos tempo dos dinossauro, dê um pulo lá no museu em Santana. Pode ir que é só o filé, visse!?",
-        "Tu tá afim de conhecer bem esse Cariri, caba véi? Pois segura que é informação viu? Tem o Horto do Padre Cícero pra tu conhecer e alimentar tua fé, tem a Chapada do Araripe e todas as suas belezas naturais. Tem também o Museu de Paleontologia em Santana do Cariri, que é massa viu? Agora se tu gosta de história e cultura do interior, a Fundação Casa Grande é boa demais!"
-      ],
-      "guia_aperreado": [
-        "Na região do cariri o  balneário caldas o arajara park o praia park como principais. Com espaço para crianças e sombra. Fácil de chegar e seguro.",
-        "A estátua do Padre Cícero em Juazeiro do Norte. O Parque Nacional da Chapada do Araripe",
-        "A igreja do Salesiano se você for religioso. A Fundação Casa Grande em Nova Olinda."]
+        "guia_turistico": [
+            "A região do Cariri tem uma diversidade de pontos turísticos. Entre os quais se destacam a colina do Horto com a estátua de Padre Cícero (Juazeiro), a Floresta Nacional do Araripe e o Museu Paleontológico de Santana do Cariri.",
+            "A fundação Casa Grande em Olinda é uma ótima opção para quem quer se enriquecer na cultura do Cariri. O Parque dos Pterossauros é um ótimo local para realizar trilhas e conhecer fósseis. A estátua do Padre Cícero se destaca, valendo bastante a pena conhecer a casa onde o mesmo morava, cheia de detalhes e riquezas culturais.",
+            "O museu dos dinossauros em Santana do Cariri é rico em história e cultura, vale bastante a pena ir. O Horto com os seus bondinhos encanta qualquer um em uma tarde de domingo de brisa boa. Se você é mais religioso, pode optar por conhecer as igrejas da cidade, a Igreja do Salesianos é incrível."
+        ],
+        "cabra_arretado": [
+            "Ôh meu chapa, tu quer é rodar esse Cariri, num é? Pois escute o que o cabra aqui tem pra te dizer! Se tu é do povo da reza, tem que subir no Horto pra dar um 'oi' pro Padim Ciço, a vista de lá é arretada! Agora, se tua praia é um mato verde e um arzim fresco, se jogue na Chapada do Araripe, que é pra encher os olhos. E se curtir umas coisa véia, dos tempo dos dinossauro, dê um pulo lá no museu em Santana. Pode ir que é só o filé, visse!?",
+            "Tu tá afim de conhecer bem esse Cariri, caba véi? Pois segura que é informação viu? Tem o Horto do Padre Cícero pra tu conhecer e alimentar tua fé, tem a Chapada do Araripe e todas as suas belezas naturais. Tem também o Museu de Paleontologia em Santana do Cariri, que é massa viu? Agora se tu gosta de história e cultura do interior, a Fundação Casa Grande é boa demais!"
+        ],
+        "guia_aperreado": [
+            "Na região do cariri o balneário caldas o arajara park o praia park como principais. Com espaço para crianças e sombra. Fácil de chegar e seguro.",
+            "A estátua do Padre Cícero em Juazeiro do Norte. O Parque Nacional da Chapada do Araripe",
+            "A igreja do Salesiano se você for religioso. A Fundação Casa Grande em Nova Olinda."]
+        
     }
-  },
-  {
-    "palavras_chaves": ["alimentar","culinária","comida","comer","almoçar"],
+},
+{
+    "palavras_chaves": ["alimentar", "culinária", "comida", "comer", "almoçar"],
     "respostas": {
-      "guia_turistico": [
-        "Existem muitos locais onde se pode comer tendo contato com a natureza, como o Colina do Horto (Juazeiro), o Melaço (Barbalha) e o Bosque da Serra (Crato).",
-        "O Sirigado do Pedro é uma ótima opção de culinária sofisticada. Também tem o Esfera, com uma culinária contemporânea que dá água na boca. Mas se você preferir algo mais em conta, existem vários resturantes em contato com a natureza que são bons e baratos. Como o Melaço, o Colina do Horto, o Restô Jardim... Vale a pena conhecer todos.",
-        "Vale a pena conhecer a praça de alimentação do Cariri Garden Shoppin, com diversos restaurantes dos mais variados tipos. Fastfood, comida brasileira, italiana e muito mais."
-      ],
-      "cabra_arretado": [
-        "Opa, falou em comida o bucho até ronca! Pois se aprume que lá vem dica boa. Se tu quer bater um prato com sustância, com um baião de dois e uma carne de sol que desmancha na boca, procure o Baião.Com. Lá é o canto certo pra quem tá com fome de verdade! Agora, se tu prefere um ambiente bonito de verdade, comendo uma pizza ou um churrasco, dê um pulo no Mirante La Casa. É mais simples, mas a comida é um espetáculo! E pra fechar o dia, vai comer uma pizza ali na Praça da Sé, no Crato. Não tem erro, macho véi. Mas se tu não tá satisfeito e quer mais, é só pedir!",
-        "Fala tu, caba véi! Se tu tiver afim de uma culinário sofisticada, tu tem que ir no Sirigado do Pedro ou no Graveto, é bom de verdade! Mas se tu quer pagar mais barato e comer bem mesmo assim, o Restô Jardim dá de conta demais! Feijoadinha lá no preço, meu patrão. Agora se tu tá afim mesmo é de um fast food... o Drive Thru do McDonalds tá te esperando bem ao lado do Mix Matheus, e tem no shopping também, viu?"
-      ],
-      "guia_aperreado": [
-        "Parque Nacional do Catimbau, Parque do Pontal (Crato), Açude do Cedro, Horto Florestal (Crato).",
-        "Restaurante Sirigado do Pedro, (Juazeiro do Norte), O caldo do Véi do Caldo(Crato) e a Carne de Sol do 'Melaço'(Barbalha)",
-        "A Feira Livre de Juazeiro (panelada e buchada) O Pau D'Arco (Crato) e o Calçadão de Barbalha para refeições em família."]
+        "guia_turistico": [
+            "Existem muitos locais onde se pode comer tendo contato com a natureza, como o Colina do Horto (Juazeiro), o Melaço (Barbalha) e o Bosque da Serra (Crato).",
+            "O Sirigado do Pedro é uma ótima opção de culinária sofisticada. Também tem o Esfera, com uma culinária contemporânea que dá água na boca. Mas se você preferir algo mais em conta, existem vários resturantes em contato com a natureza que são bons e baratos. Como o Melaço, o Colina do Horto, o Restô Jardim... Vale a pena conhecer todos.",
+            "Vale a pena conhecer a praça de alimentação do Cariri Garden Shoppin, com diversos restaurantes dos mais variados tipos. Fastfood, comida brasileira, italiana e muito mais."
+        ],
+        "cabra_arretado": [
+            "Opa, falou em comida o bucho até ronca! Pois se aprume que lá vem dica boa. Se tu quer bater um prato com sustância, com um baião de dois e uma carne de sol que desmancha na boca, procure o Baião.Com. Lá é o canto certo pra quem tá com fome de verdade! Agora, se tu prefere um ambiente bonito de verdade, comendo uma pizza ou um churrasco, dê um pulo no Mirante La Casa. É mais simples, mas a comida é um espetáculo! E pra fechar o dia, vai comer uma pizza ali na Praça da Sé, no Crato. Não tem erro, macho véi. Mas se tu não tá satisfeito e quer mais, é só pedir!",
+            "Fala tu, caba véi! Se tu tiver afim de uma culinário sofisticada, tu tem que ir no Sirigado do Pedro ou no Graveto, é bom de verdade! Mas se tu quer pagar mais barato e comer bem mesmo assim, o Restô Jardim dá de conta demais! Feijoadinha lá no preço, meu patrão. Agora se tu tá afim mesmo é de um fast food... o Drive Thru do McDonalds tá te esperando bem ao lado do Mix Matheus, e tem no shopping também, viu?"
+        ],
+        "guia_aperreado": [
+            "Parque Nacional do Catimbau, Parque do Pontal (Crato), Açude do Cedro, Horto Florestal (Crato).",
+            "Restaurante Sirigado do Pedro, (Juazeiro do Norte), O caldo do Véi do Caldo(Crato) e a Carne de Sol do 'Melaço'(Barbalha)",
+            "A Feira Livre de Juazeiro (panelada e buchada) O Pau D'Arco (Crato) e o Calçadão de Barbalha para refeições em família."
+        ]
     }
-  },
-  {
-    "palavras_chaves": ["familia","lazer","diversão","curtir","aproveitar"],
+},
+{
+    "palavras_chaves": ["familia", "lazer", "diversão", "curtir", "aproveitar"],
     "respostas": {
-      "guia_turistico": [
-        "Existem muitos balneários espalhados pela região para você se divertir, como o Caldas, localizado em Barbalha; o Verdes Vales, parque aquático localizado em Juazeiro do Norte; e o Parque Grangeiro, localizado na encosta da Chapada, no Crato.",
-        "Não deixe de ir ao Aqua Park, alugar uma casa no Açude Umari para passar o fim de semana também é uma ótima ideia! Contato com a natureza e paz.",
-        "O Arajara Park é ideal para uma diversão em família! Contando com brinquedos aquáticos maneiros, culinária, trilhas, tirolesa. É um tiro certo na diversão para você e toda a sua família!"
-      ],
-      "cabra_arretado": [
-        "Arre égua, meu patrão! Juntar a família pra curtir é bom demais! Ói, se o povo aí gosta de um banho pra refrescar o calor, pode levar todo mundo no Caldas, lá em Barbalha, que as águas de lá são famosas! Agora, se a meninada tá querendo mais agito e escorregar num toboágua, o lugar certo é o Verdes Vales, ali em Juazeiro. E se a ideia for um passeio mais de boa, pra respirar um ar puro da Chapada, o Parque Grangeiro, no Crato, é um lugar arretado pra isso. Opção é o que não falta, visse?",
-        "Não pode faltar um passeio pelo Geopark Araripe, viu? Lá nos geossítios tu vai ver uma beleza de cair o queixo, se conectar com a natureza e ainda tirar umas foto pra postar e causar inveja. E se a família tá afim de um rolê mais tranquilin, com ar-condicionado e tudo no quentinho, mete o pé no Cariri Garden Shopping. Lá dá pra fazer umas comprinhas, comer um lanche e ainda se divertir todo mundo sai feliz, macho!",
-        "Macho! Tu sabe que tem muito local massa por aqui não? Se quiser curtir a natureza, corre para o GeoPark da Chapada, para o ArajaraPark sentir o frio na barriga de uma tiroleza massa de verdade. Agora se tá mais afim de um ar-condicionado nesse calor de rachar o côco, se apruma e vai para o Cariri Garden Shopping, comer um Mc Donalds e levar as crianças para o parquinho! Tem erro não, macho. Agora se tu tiver querendo escolher história, se apruma para subir o Horto e conhecer a estátua do Padre Cícero! De quebra tu ainda anda de bondinho.",
-        "Opa, falou em diversão em família, meu fio? Então segura essas dicas que o pai tá dando! Se a criançada tá doida pra se jogar na água e você também quer cair na correnteza, o AquaPark Cariri é o point! Lá é puro surubim na água, dá pra gastar a energia toda e ainda rir à beça. Agora, se tu quer um rolê mais natureba, cheio de aventura, o ArajaraPark é seu lugar! Tem tirolesa pra dar aquele gás, tobogãzinho pros piá pequeno se esbaldar e ainda aquela correnteza gostosa pra refrescar. É diversão na certa!"
-      ],
-      "guia_aperreado": [
-        "Pousada Pérola do Cariri (Crato) e Sítio Pinheiros (Barbalha).",
-        "Cariri Garden Shopping (Juazeiro do Norte). Cachoeira do Pinga e trilhas no rio (Missão Velha). Parque aquático Aquas Cariri (Juazeiro do Norte)",
-        "Artesanato em Missão Velha. Engenho Tupinambá em Barbalha. Museu de Paleontologia em Santana do Cariri"]
+        "guia_turistico": [
+            "Existem muitos balneários espalhados pela região para você se divertir, como o Caldas, localizado em Barbalha; o Verdes Vales, parque aquático localizado em Juazeiro do Norte; e o Parque Grangeiro, localizado na encosta da Chapada, no Crato.",
+            "Não deixe de ir ao Aqua Park, alugar uma casa no Açude Umari para passar o fim de semana também é uma ótima ideia! Contato com a natureza e paz.",
+            "O Arajara Park é ideal para uma diversão em família! Contando com brinquedos aquáticos maneiros, culinária, trilhas, tirolesa. É um tiro certo na diversão para você e toda a sua família!"
+        ],
+        "cabra_arretado": [
+            "Arre égua, meu patrão! Juntar a família pra curtir é bom demais! Ói, se o povo aí gosta de um banho pra refrescar o calor, pode levar todo mundo no Caldas, lá em Barbalha, que as águas de lá são famosas! Agora, se a meninada tá querendo mais agito e escorregar num toboágua, o lugar certo é o Verdes Vales, ali em Juazeiro. E se a ideia for um passeio mais de boa, pra respirar um ar puro da Chapada, o Parque Grangeiro, no Crato, é um lugar arretado pra isso. Opção é o que não falta, visse?",
+            "Não pode faltar um passeio pelo Geopark Araripe, viu? Lá nos geossítios tu vai ver uma beleza de cair o queixo, se conectar com a natureza e ainda tirar uns foto pra postar e causar inveja. E se a família tá afim de um rolê mais tranquilin, com ar-condicionado e tudo no quentinho, mete o pé no Cariri Garden Shopping. Lá dá pra fazer umas comprinhas, comer um lanche e ainda se divertir todo mundo sai feliz, macho!",
+            "Macho! Tu sabe que tem muito local massa por aqui não? Se quiser curtir a natureza, corre para o GeoPark da Chapada, para o ArajaraPark sentir o frio na barriga de uma tiroleza massa de verdade. Agora se tá mais afim de um ar-condicionado nesse calor de rachar o côco, se apruma e vai para o Cariri Garden Shopping, comer um Mc Donalds e levar as crianças para o parquinho! Tem erro não, macho. Agora se tu tiver querendo escolher história, se apruma para subir o Horto e conhecer a estátua do Padre Cícero! De quebra tu ainda anda de bondinho.",
+            "Opa, falou em diversão em família, meu fio? Então segura essas dicas que o pai tá dando! Se a criançada tá doida pra se jogar na água e você também quer cair na correnteza, o AquaPark Cariri é o point! Lá é puro surubim na água, dá pra gastar a energia toda e ainda rir à beça. Agora, se tu quer um rolê mais natureba, cheio de aventura, o ArajaraPark é seu lugar! Tem tirolesa pra dar aquele gás, tobogãzinho pros piá pequeno se esbaldar e ainda aquela correnteza gostosa pra refrescar. É diversão na certa!"
+        ],
+        "guia_aperreado": [
+            "Pousada Pérola do Cariri (Crato) e Sítio Pinheiros (Barbalha).",
+            "Cariri Garden Shopping (Juazeiro do Norte). Cachoeira do Pinga e trilhas no rio (Missão Velha). Parque aquático Aquas Cariri (Juazeiro do Norte)",
+            "Artesanato em Missão Velha. Engenho Tupinambá em Barbalha. Museu de Paleontologia em Santana do Cariri"
+        ]
     }
-  },
-  {
-    "palavras_chaves": ["tchau","obrigado","encerrar","sair"],
+},
+{
+    "palavras_chaves": [
+        "religião", "igrejas", "fé", "visita", "romaria", "padroeiro", "santo", "padim ciço", "oração", "católico", "religioso", "igreja matriz", "santuário", "capela", "peregrinação", "devoção", "igreja histórica", "arquitetura sacra", "sagrado", "turismo religioso", "altar", "padre cícero", "horto", "salesianos"
+    ],
     "respostas": {
-      "guia_turistico": [
-        "Fico feliz em ajudar. Caso necessite de mais alguma informação, estou à sua disposição. Desejo a você uma excelente viagem pela região do Cariri."
-      ],
-      "cabra_arretado": [
-        "Valeu, cabra bom! Até a próxima!"
-      ],
-      "guia_aperreado": [
-        "Pronto. Assunto resolvido. Encerrando."
-      ]
+        "guia_turistico": [
+            "O Horto do Padre Cícero em Juazeiro é um dos pontos mais visitados por romeiros e turistas religiosos.",
+            "A Igreja dos Salesianos é uma das mais tradicionais da região, com uma arquitetura imponente.",
+            "Além disso, várias pequenas capelas e igrejas em Juazeiro e Barbalha guardam a fé e a tradição do povo caririense."
+        ],
+        "cabra_arretado": [
+            "Se tu vem pro Cariri com fé no peito, tem que subir no Horto do Padim Ciço, cabra! Lá em cima a vista é bonita que só e a energia é forte demais.",
+            "A Igreja dos Salesianos é grandona e imponente, vale a visita pra rezar e também pra admirar a construção.",
+            "E num se avexe não: em Juazeiro e Barbalha tem capela em cada canto, tudo cheio de fé e tradição do nosso povo."
+        ],
+        "guia_aperreado": [
+            "No Cariri... o Horto do Padre Cícero em Juazeiro... é o principal destino religioso... muitos visitantes e romeiros.",
+            "A Igreja dos Salesianos... é bem conhecida... arquitetura bonita... tradição forte na região.",
+            "Também... várias capelas e igrejas menores em Juazeiro e Barbalha... preservam a fé do povo... muito procuradas."
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "história", "cultura", "museus", "visita", "patrimônio", "arte", "exposição", "tradição", "memória", "arqueologia", "paleontologia", "fundação", "centro cultural", "fósseis", "dinossauros", "arquitetura", "religioso", "Padre Cícero", "turismo cultural", "pontos históricos", "acervo", "antigo", "coleções"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "O Museu de Paleontologia em Santana do Cariri é referência nacional em fósseis e história natural.",
+            "A Fundação Casa Grande em Nova Olinda é um projeto cultural que resgata a tradição e história da região.",
+            "Em Juazeiro do Norte, a casa onde morou Padre Cícero virou museu e é cheia de memórias e objetos históricos."
+        ],
+        "cabra_arretado": [
+            "Oxente, se tu gosta de coisa véia cheia de valor, vá logo ver o Museu de Paleontologia em Santana, que lá tem fóssil dos tempo dos dinossauro, cabra!",
+            "Em Nova Olinda, a tal da Fundação Casa Grande é massa demais, é cultura que só a molesta! Tu vai sair de lá sabendo história que nem imaginava.",
+            "E Juazeiro, homi? A casa do Padim Ciço virou museu, cada cantinho tem lembrança dela. Vale a passada, visse?"
+        ],
+        "guia_aperreado": [
+            "O Museu de Paleontologia em Santana do Cariri... muito importante, cheio de fósseis... bem organizado.",
+            "Tem também a Fundação Casa Grande em Nova Olinda, centro cultural... preserva memória da região.",
+            "E em Juazeiro... a casa do Padre Cícero, virou museu... muitas lembranças e objetos... histórico."
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "natureza", "trilhas", "passeios", "ar livre", "Cariri", "aventura", "cachoeira", "serra", "chapada", "mata", "floresta", "verde", "ecoturismo", "ecológico", "caminhada", "trilha ecológica", "parque natural", "trilhas leves", "mirante", "paisagem", "ar puro", "trilha longa", "fauna", "flora", "exploração"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "A Chapada do Araripe é o grande destaque para quem gosta de trilhas e contato com a natureza.",
+            "Na Floresta Nacional do Araripe você pode encontrar trilhas leves e contato direto com a fauna e flora locais.",
+            "O Parque dos Pterossauros em Santana do Cariri também é uma boa opção de passeio ao ar livre, com muita história e natureza."
+        ],
+        "cabra_arretado": [
+            "Ôh cabra, se tu gosta de andar no mato, a Chapada do Araripe é o paraíso, visse? É verde pra todo lado e a vista é arretada!",
+            "Na Floresta Nacional do Araripe tu encontra trilha boa, sombra e um arzinho fresco que só faz bem.",
+            "E se tu curte coisa diferente, vai no Parque dos Pterossauros em Santana. Além da natureza, ainda tem fóssil e história dos bichões antigos!"
+        ],
+        "guia_aperreado": [
+            "A Chapada do Araripe... principal atrativo natural... muitas trilhas... paisagens bonitas.",
+            "Na Floresta Nacional do Araripe... trilhas fáceis... contato direto com fauna e flora... lugar tranquilo.",
+            "Parque dos Pterossauros em Santana do Cariri... mistura de natureza e história... opção interessante para passeio."
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "eventos", "festas", "tradições", "Cariri", "quando", "procissão", "celebração", "costumes", "festividade", "manifestações culturais", "cultura popular", "festival", "programação", "atrações", "show", "música", "dança", "feira", "costume", "padroeiro", "santo antônio", "padim ciço", "expocrato", "agenda cultural"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "O Cariri é muito rico em festas e tradições. A Romaria de Padre Cícero em Juazeiro é uma das maiores manifestações religiosas do Brasil, vale a pena conhecer! Acontece entre 30 de Agosto e 15 de Setembro.",
+            "Em Barbalha, a Festa do Pau da Bandeira de Santo Antônio é famosa e reúne milhares de pessoas todos os anos. Inicia todo ano no dia 30 de Maio, atrai pessoas de todas as cidades e é um show de cultura",
+            "No Crato, o Festival Expocrato, entre os dias 11 e 20 de Julho, acontece anualmente e é um dos maiores eventos musicais e culturais do Nordeste. Local ótimo para conhecer a cultura da agropecuária do interior do Nordeste e curtir as principais atrações do Brasil em shows incríveis."
+        ],
+        "cabra_arretado": [
+            "Ô meu patrão, se tu gosta de festa grande, se avexe não: em Juazeiro tem a Romaria do Padim Ciço, é gente de todo canto rezando e cantando junto! Mas tu se liga na data, viu? Acontece entre o dia 30 de Agosto e 15 de Setembro, tô te dizendo pra tu não ficar perdido!",
+            "Agora, se tu quer ver tradição de verdade, vá em Barbalha na Festa do Pau da Bandeira. É animação que só, o povo carregando o pau no ombro, é bonito demais de ver!",
+            "E no Crato, homi? A Expocrato bota pra quebrar, é show, música e cultura do Nordeste todim reunido num lugar só! Comida de todo tipo tu encontra lá! De filhós a churrasco grego, é coisa pra todo gosto. Cuida e vem, é em Julho!"
+        ],
+        "guia_aperreado": [
+            "Em Juazeiro... a Romaria do Padre Cícero... acontece várias vezes no ano... é a maior manifestação religiosa da região. 30 de Agosto a 15 de Setembro",
+            "Na cidade de Barbalha... a Festa do Pau da Bandeira de Santo Antônio... tradição famosa... atrai muita gente. Começa no dia 31 de maio",
+            "No Crato... o Festival Expocrato... evento anual... mistura música, cultura e entretenimento. Em Julho, no Parque de Exposição do"
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "restaurantes", "comida", "onde comer", "gastronomia", "pratos típicos", "culinária", "regional", "galinha caipira", "feijoada", "bolo de rolo", "doces", "arroz de leite", "restaurante popular", "bar", "lanche", "padaria", "recomendação", "sabores", "tradição culinária"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "No Cariri, restaurantes como o Varanda em Juazeiro oferecem pratos típicos da região, como a galinha caipira e arroz de leite.",
+            "Em Crato, o La Favorita é ótimo para massas, enquanto o Churrascão do Boi serve carnes deliciosas.",
+            "Em Barbalha, o Restaurante Pau D'Arco é uma boa pedida para quem quer provar a culinária regional autêntica."
+        ],
+        "cabra_arretado": [
+            "Ô meu patrão, se tu quer comer bem no Cariri, vai no Varanda em Juazeiro, galinha caipira que é de lamber os dedos!",
+            "No Crato, La Favorita pra massa ou Churrascão do Boi pra carne... tu não vai se arrepender, visse?",
+            "E em Barbalha, homi? Restaurante Pau D'Arco é tradição, comida arretada e gostosa demais!"
+        ],
+        "guia_aperreado": [
+            "Em Juazeiro... Restaurante Varanda... pratos típicos... galinha caipira e arroz de leite... bem avaliado.",
+            "No Crato... La Favorita... massas... Churrascão do Boi... carnes... opção confiável.",
+            "Em Barbalha... Restaurante Pau D'Arco, culinária regional, bom atendimento e tradição local."
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "hotéis", "pousadas", "Cariri", "hospedagem", "onde ficar", "acomodação", "quarto", "resort", "alojamento", "hotelaria", "hostel", "apartamento", "diária", "conforto", "serviço", "café da manhã", "vista panorâmica", "localização", "preço", "estadia", "turismo", "viagem", "cidade", "centro", "região"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "Em Juazeiro do Norte, o Hotel IUÁ, Ibis e Nobile oferecem conforto e boa localização para explorar a cidade.",
+            "No Crato, o Hotel Pasárgada oferece quartos aconchegantes e café da manhã incluso, ideal para turistas.",
+            "Barbalha possui opções como o Hotel Serra Dourada, que combina boa estrutura com proximidade de atrações naturais."
+        ],
+        "cabra_arretado": [
+            "Ôh cabra, se tu quer ficar bem em Juazeiro, o Villa Alta é top, confortável e pertinho de tudo!",
+            "No Crato, a Pousada Cariri é massa, quarto bom e café da manhã que dá sustança pro dia todo.",
+            "E em Barbalha, homi, o Hotel Serra Dourada é show de bola, perto de trilha e natureza!"
+        ],
+        "guia_aperreado": [
+            "Juazeiro do Norte... Hotel Villa Alta... boa localização... quartos confortáveis... adequado para turistas.",
+            "Crato... Pousada Cariri... quartos aconchegantes... café da manhã incluso... boa opção de hospedagem.",
+            "Barbalha... Hotel Serra Dourada... estrutura adequada... próximo a atrações naturais... recomendado."
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "esportes", "atividades físicas", "Cariri", "onde praticar", "futebol", "basquete", "voleibol", "corrida", "trilha", "ciclismo", "tirolesa", "escalada", "aventura", "outdoor", "natação", "praça esportiva", "parque", "quadra", "campo", "treino", "atividade ao ar livre", "esporte radical", "trekking"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "No Cariri, você pode praticar esportes ao ar livre, como trilhas na Chapada do Araripe e ciclismo pela região.",
+            "As praças e parques de Juazeiro e Crato oferecem espaço para futebol, basquete e vôlei.",
+            "Algumas pousadas e hotéis também oferecem quadras e piscinas para atividades físicas durante a estadia."
+        ],
+        "cabra_arretado": [
+            "Ôh meu patrão, se tu gosta de esporte, se joga nas trilhas da Chapada do Araripe ou pega a bike pela região!",
+            "As praças de Juazeiro e Crato são ótimas pra bater bola, jogar basquete ou vôlei com a galera.",
+            "E se tu tá hospedado num hotel ou pousada boa, dá pra aproveitar a quadra e piscina pra treinar sem sair do lugar!"
+        ],
+        "guia_aperreado": [
+            "Chapada do Araripe... trilhas... ciclismo... esportes ao ar livre... contato com natureza.",
+            "Praças e parques em Juazeiro e Crato... futebol, basquete e vôlei... espaço disponível para prática.",
+            "Hotéis e pousadas... algumas oferecem quadras e piscinas... para atividades físicas durante a estadia."
+        ]
+    }
+},
+{
+    "palavras_chaves": [
+        "academia", "fitness", "Cariri", "onde treinar", "musculação", "crossfit", "pilates", "yoga", "atividade física", "treino", "saúde", "bem-estar", "exercício", "personal trainer", "ginásio", "studio", "alongamento", "cardio", "peso livre", "treinamento funcional", "spinning", "hidroginástica", "atividade indoor", "ginástica", "esporte"
+    ],
+    "respostas": {
+        "guia_turistico": [
+            "Em Juazeiro do Norte, a Academia Fitness Exclusive oferece equipamentos modernos e aulas de ginástica para todos os níveis.",
+            "No Crato, o Studio Corpo e Movimento oferece aulas de pilates, yoga e treinamento funcional.",
+            "Barbalha possui também a academia Fitness Exclusive, com musculação, cardio e personal trainer disponíveis para os visitantes."
+        ],
+        "cabra_arretado": [
+            "Ôh cabra, se tu quer manter o shape no Cariri, vai na academia ViaFit em Juazeiro, equipamento top e treino pra todo mundo!",
+            "No Crato, Studio Corpo e Movimento é massa, tem pilates, yoga e funcional pra ninguém ficar parado.",
+            "E em Barbalha, homi, Academia Fitness Exclusive é arretada, cardio e musculação pra todo gosto, ainda tem personal pra te ajudar!"
+        ],
+        "guia_aperreado": [
+            "Juazeiro do Norte... Academia Fitness Exclusive... equipamentos modernos... aulas de ginástica... para todos os níveis.",
+            "Crato... Studio Corpo e Movimento... pilates, yoga, treinamento funcional... boa estrutura para prática de exercícios.",
+            "Barbalha... Academia Fitness Exclusive... musculação, cardio, personal trainer... adequada para visitantes e moradores."
+        ]
+    }
+},
+{
+    "palavras_chaves": ["tchau", "obrigado", "encerrar", "sair"],
+    "respostas": {
+        "guia_turistico": [
+            "Fico feliz em ajudar. Caso necessite de mais alguma informação, estou à sua disposição. Desejo a você uma excelente viagem pela região do Cariri."
+        ],
+        "cabra_arretado": [
+            "Valeu, cabra bom! Até a próxima!"
+        ],
+        "guia_aperreado": [
+            "Até"
+        ]
     }
   }
 ]
