@@ -85,7 +85,7 @@ A tela principal do chatbot apresenta uma interface limpa, exibindo as últimas 
 
 ---
 **2. Sistema de Personalidades Dinâmicas -**
-O principal diferencial do chatbot é a capacidade de responder à mesma pergunta de formas diferentes. O usuário pode trocar de personalidade a qualquer momento clicando nos botões das personaliades
+O principal diferencial do chatbot é a capacidade de responder à mesma pergunta de formas diferentes. O usuário pode trocar de personalidade a qualquer momento clicando nos botões das personalidades
 
 <img width="1919" height="1079" alt="Sem título" src="https://github.com/user-attachments/assets/6b03b11f-5f8c-4e13-9c60-bfc96e59f7bc" />
 
