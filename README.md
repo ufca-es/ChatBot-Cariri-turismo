@@ -76,8 +76,31 @@ Este projeto foi desenvolvido de forma colaborativa pelos seguintes integrantes:
 ---
 ## 📷Demonstrações
 
-<img width="1365" height="766" alt="image" src="https://github.com/user-attachments/assets/a8b37305-7f12-4cba-a7e2-651bba6f82ac" />
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/f2026c5a-2f0a-45da-add7-ebaccb5f31e8" />
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/f18eb5f7-f273-4a0f-82c7-ba85b9341d1f" />
 
+**1. Tela Inicial e Histórico -**
+A tela principal do chatbot apresenta uma interface limpa, exibindo as últimas interações do histórico para dar contexto ao usuário.
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2a75c767-ad70-4302-accb-e139d3745987" />
+
+
+---
+**2. Sistema de Personalidades Dinâmicas -**
+O principal diferencial do chatbot é a capacidade de responder à mesma pergunta de formas diferentes. O usuário pode trocar de personalidade a qualquer momento clicando nos botões das personaliades
+
+<img width="1919" height="1079" alt="Sem título" src="https://github.com/user-attachments/assets/6b03b11f-5f8c-4e13-9c60-bfc96e59f7bc" />
+
+
+---
+**3. Modo de Aprendizagem -**
+Quando o chatbot não reconhece uma pergunta, ele entra em modo de aprendizado, permitindo que o usuário ensine novas respostas e expanda a base de conhecimento.
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/3530e9eb-aeca-4e1a-bf88-421f6dd81b55" />
+
+
+---
+**4. Relatório Final de Estatísticas**
+Ao final de cada sessão, um relatório completo é gerado com as estatísticas de uso, como o total de interações, a pergunta mais frequente e o uso de cada personalidade.
+
+<img width="360" height="156" alt="image" src="https://github.com/user-attachments/assets/411511e3-70d8-4be7-9794-bb0e2d5bf3e3" />
+<img width="548" height="355" alt="image" src="https://github.com/user-attachments/assets/ae63d24f-63e5-46b2-b473-5a86de5303e4" />
 
