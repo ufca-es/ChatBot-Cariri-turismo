@@ -75,3 +75,9 @@ Este projeto foi desenvolvido de forma colaborativa pelos seguintes integrantes:
 * **Malaquias Oliveira** - *Desenvolvimento da classe Esatísticas, atualização do banco de dados do banco de dados.*
 ---
 ## 📷Demonstrações
+
+<img width="1365" height="766" alt="image" src="https://github.com/user-attachments/assets/a8b37305-7f12-4cba-a7e2-651bba6f82ac" />
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/f2026c5a-2f0a-45da-add7-ebaccb5f31e8" />
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/f18eb5f7-f273-4a0f-82c7-ba85b9341d1f" />
+
+
