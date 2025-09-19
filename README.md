@@ -51,7 +51,7 @@ Siga os passos abaixo para executar o ChatBot Cariri Turismo em sua máquina loc
 **2. Clone o Repositório -**
 Abra seu terminal ou Git Bash e utilize o comando abaixo para criar uma cópia local do projeto.
 ```bash
-git clone [https://github.com/ufca-es/ChatBot-Cariri-turismo](https://github.com/ufca-es/ChatBot-Cariri-turismo)
+git clone https://github.com/ufca-es/ChatBot-Cariri-turismo.git
 ```
 **3. Navegue até a pasta -**
 Entre na pasta do projeto que foi recém-criada.
